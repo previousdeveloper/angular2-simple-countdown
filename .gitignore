@@ -25,3 +25,40 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
+
+
+# Don’t commit the following directories created by pub.
+/dist/
+packages/
+.buildlog
+.pub
+.DS_STOR
+
+# Include when developing application packages.
+pubspec.lock
+.c9
+.idea/
+*.swo
+
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+
+
+# Dependency directory
+# Commenting this out is preferred by some people, see
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+
+.tsdrc
+
+#IntelliJ configuration files
+.idea
+
+dist
+dev
+test
+tsd_typings
+
+# Dependency directory
+# Commenting this out is preferred by some people, see
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+bower_components

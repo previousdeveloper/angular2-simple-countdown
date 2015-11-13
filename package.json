@@ -1,0 +1,28 @@
+{
+  "name": "angular2-simple-countdown",
+  "version": "0.0.1",
+  "description": "Simple Angular2 CountDown",
+  "main": "lib/countdown.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/previousdeveloper/angular2-simple-countdown.git"
+  },
+  "keywords": [
+    "angular2 countdown",
+    "simple countdown"
+  ],
+  "author": "Gokhan Karadas <gokhan.karadas1992@gmail.com> (http://www.gokhankaradas.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/previousdeveloper/angular2-simple-countdown/issues"
+  },
+  "homepage": "https://github.com/previousdeveloper/angular2-simple-countdown/issues#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "request": "^2.64.0",
+    "yargs": "^3.29.0"
+  }
+}
