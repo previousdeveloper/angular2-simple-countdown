@@ -18,6 +18,10 @@ export class CountDown {
     units:any;
     end:any;
 
+    onInit() {
+        setInterval(()=>this.displayString(), 1);
+    }
+
     displayString() {
 
         if (typeof this.units === 'string') {
