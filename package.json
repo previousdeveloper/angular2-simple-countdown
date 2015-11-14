@@ -1,8 +1,9 @@
 {
   "name": "angular2-simple-countdown",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Simple Angular2 CountDown",
-  "main": "countdown.ts",
+  "main": "countdown.js",
+  "typings": "./countdown.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
