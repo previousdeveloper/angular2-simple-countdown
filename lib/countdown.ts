@@ -1,5 +1,5 @@
-import {Component,FORM_DIRECTIVES} from 'angular2/angular2';
-
+import {FORM_DIRECTIVES} from "angular2/common";
+import {Component} from "angular2/core";
 
 @Component({
     selector: 'count-down',
@@ -8,7 +8,7 @@ import {Component,FORM_DIRECTIVES} from 'angular2/angular2';
         'end'
     ],
     directives: [FORM_DIRECTIVES],
-    template: `<h1>{{displayString()}}</h1>
+    template: `<h1>{{displayString}}</h1>
   <ng-content></ng-content>
   `
 })
@@ -17,12 +17,12 @@ import {Component,FORM_DIRECTIVES} from 'angular2/angular2';
 export class CountDown {
     units:any;
     end:any;
-
-    onInit() {
-        setInterval(()=>this.displayString(), 1);
+    displayString: string = '';
+    constructor() {
+        setInterval(()=>this._displayString(), 1);
     }
 
-    displayString() {
+    _displayString() {
 
         if (typeof this.units === 'string') {
             this.units = this.units.split('|');
@@ -71,7 +71,7 @@ export class CountDown {
                 returnString += ' ' + unitsLeft[unit] + ' ' + unit;
             }
         }
-        return returnString;
+        this.displayString = returnString;
     }
 
 
