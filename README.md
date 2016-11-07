@@ -12,12 +12,14 @@ a simple countdown angular2 directive with multiple language
 
 ## Usage
 ```javascript
-import {
-  CountDown
-}
-from './countdown';
-
-directives: [CountDown] // Add your directives
+import {CountDown} from "./countdown";
+@NgModule({
+  declarations: [
+    CountDown
+  ],
+  ....
+  
+  })
 
 <count-down units="Days | Hours | Minutes | Seconds | Milliseconds" end="February 22, 2016"></count-down>
 <count-down units="Days | Hours " end="February 22, 2016"></count-down>
