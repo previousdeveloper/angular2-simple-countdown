@@ -13,6 +13,7 @@ a simple countdown angular2 directive with multiple language
 ## Usage
 ```javascript
 import {CountDown} from "./countdown";
+
 @NgModule({
   declarations: [
     CountDown
