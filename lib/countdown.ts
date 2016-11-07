@@ -1,13 +1,7 @@
-import {FORM_DIRECTIVES} from "angular2/common";
-import {Component} from "angular2/core";
+import {Component,Input} from "@angular/core";
 
 @Component({
     selector: 'count-down',
-    properties: [
-        'units',
-        'end'
-    ],
-    directives: [FORM_DIRECTIVES],
     template: `<h1>{{displayString}}</h1>
   <ng-content></ng-content>
   `
@@ -15,9 +9,9 @@ import {Component} from "angular2/core";
 
 
 export class CountDown {
-    units:any;
-    end:any;
-    displayString: string = '';
+   @Input() units:any;
+   @Input() end:any;
+   @Input() displayString: string = '';
     constructor() {
         setInterval(()=>this._displayString(), 1);
     }
