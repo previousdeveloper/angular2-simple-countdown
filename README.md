@@ -8,7 +8,6 @@ a simple countdown angular2 directive with multiple language
 
 `npm install angular2-simple-countdown`
 
-## [Demo](http://plnkr.co/edit/QlfxCCxPzqhMJMTr4veT?p=preview)
 
 ## Usage
 ```javascript
