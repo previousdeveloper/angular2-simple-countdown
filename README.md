@@ -27,7 +27,7 @@ text: any = { "Weeks": "Weeks",
     "MilliSeconds":"MilliSeconds" };
 
 `Change Default Text`
-<count-down text="text" units="Days | Hours | Minutes | Seconds | Milliseconds" end="February 22, 2016"></count-down>
+<count-down [text]="text" units="Days | Hours | Minutes | Seconds | Milliseconds" end="February 22, 2016"></count-down>
 
 
 
