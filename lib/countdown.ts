@@ -1,4 +1,4 @@
-import {Component,Input} from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector: 'count-down',
@@ -9,11 +9,13 @@ import {Component,Input} from "@angular/core";
 
 
 export class CountDown {
-   @Input() units:any;
-   @Input() end:any;
-   @Input() displayString: string = '';
+    @Input() units: any;
+    @Input() end: any;
+    @Input() displayString: string = '';
+    @Input() text: any;
+
     constructor() {
-        setInterval(()=>this._displayString(), 1);
+        setInterval(() => this._displayString(), 1);
     }
 
     _displayString() {
@@ -22,8 +24,10 @@ export class CountDown {
             this.units = this.units.split('|');
         }
 
+        var givenDate: any = new Date(this.end);
+        var now: any = new Date();
 
-        var dateDifference = new Date(this.end) - new Date();
+        var dateDifference: any = givenDate - now;
         var lastUnit = this.units[this.units.length - 1],
             unitConstantForMillisecs = {
                 weeks: (1000 * 60 * 60 * 24 * 7),
@@ -37,7 +41,7 @@ export class CountDown {
             returnString = '',
             totalMillisecsLeft = dateDifference,
             i,
-            unit:any;
+            unit: any;
         for (i in this.units) {
             if (this.units.hasOwnProperty(i)) {
 
@@ -65,8 +69,23 @@ export class CountDown {
                 returnString += ' ' + unitsLeft[unit] + ' ' + unit;
             }
         }
-        this.displayString = returnString;
+
+        if (this.text === null) {
+            this.text = {
+                "Weeks": "Weeks",
+                "Days": "Days", "Hours": "Hours",
+                Minutes: "Minutes", "Seconds": "Seconds",
+                "MilliSeconds": "Milliseconds"
+            };
+        }
+
+
+        this.displayString = returnString
+            .replace("Weeks", this.text.Weeks)
+            .replace('Days', this.text.Days)
+            .replace('Hours', this.text.Hours)
+            .replace('Minutes', this.text.Minutes)
+            .replace('Seconds', this.text.Seconds)
+            .replace("Milliseconds", this.text.MilliSeconds);
     }
-
-
 }

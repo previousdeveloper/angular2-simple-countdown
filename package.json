@@ -1,6 +1,6 @@
 {
   "name": "angular2-simple-countdown",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Simple Angular2 CountDown",
   "main": "countdown.js",
   "typings": "./countdown.d.ts",
