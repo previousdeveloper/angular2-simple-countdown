@@ -1,6 +1,7 @@
 # angular2-simple-countdown
 a simple countdown angular2 directive with multiple language
 
+[![npm version](https://badge.fury.io/js/angular2-simple-countdown.svg)](https://badge.fury.io/js/angular2-simple-countdown)
 
 ## Installation
 
