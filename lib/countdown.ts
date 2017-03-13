@@ -70,7 +70,7 @@ export class CountDown {
             }
         }
 
-        if (this.text === null) {
+        if (this.text === null || !this.text) {
             this.text = {
                 "Weeks": "Weeks",
                 "Days": "Days", "Hours": "Hours",
