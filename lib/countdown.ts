@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
     selector: 'count-down',
@@ -13,6 +13,9 @@ export class CountDown {
     @Input() end: any;
     @Input() displayString: string = '';
     @Input() text: any;
+    @Output() reached: EventEmitter<Date> = new EventEmitter();
+
+    private wasReached = false
 
     constructor() {
         setInterval(() => this._displayString(), 1);
@@ -28,6 +31,12 @@ export class CountDown {
         var now: any = new Date();
 
         var dateDifference: any = givenDate - now;
+
+        if (dateDifference < 100 && dateDifference > 0 && !this.wasReached) {
+            this.wasReached = true;
+            this.reached.next(now);
+        }
+
         var lastUnit = this.units[this.units.length - 1],
             unitConstantForMillisecs = {
                 weeks: (1000 * 60 * 60 * 24 * 7),
